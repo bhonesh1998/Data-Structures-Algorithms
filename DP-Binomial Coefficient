@@ -1,0 +1,52 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+
+//int dp[100]={0};
+
+int dp[100][100]={0};
+int c(int n,int r)
+{
+
+	if(dp[n][r]==0)
+	{
+		if(n==r || r==0 )
+			dp[n][r]=1;
+		else
+			dp[n][r]=c(n-1,r-1)+c(n-1,r);
+
+
+	}
+
+	return dp[n][r];
+
+}
+
+
+
+
+int main()
+{
+	
+
+	int a,b;
+	sf("%d %d",&a,&b);
+	pf("%d",c(a,b));
+
+
+}	
+ 

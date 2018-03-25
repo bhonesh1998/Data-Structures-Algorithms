@@ -1,0 +1,43 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+
+int sol(string s1,string s2,int si1,int si2)
+{
+		if(si1==0 || si2==0)
+			return 0;
+		if(s1[si1-1]==s2[si2-1])
+			return 1+ sol(s1,s2,si1-1,si2-1);
+		else
+			return max(sol(s1,s2,si1-1,si2),sol(s1,s2,si1,si2-1));
+
+}
+
+
+int main()
+{
+	
+	string a,b;
+	cin>>a>>b;
+	int x,y;
+	x = a.length();
+	y = b.length();
+	pf("%d",sol(a,b,x,y));
+
+
+}	
+ 

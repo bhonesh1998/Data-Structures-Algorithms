@@ -1,0 +1,43 @@
+/*
+***********************************************************
+***********************************************************
+
+NAME-BHONESH CHAWLA
+REGNO-20164017
+BATCH-CS-1
+CONTACT-+918619127663
+EMAIL-rajachawla778@gmail.com
+***********************************************************
+***********************************************************
+*/
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define z long long int
+using namespace std ;
+
+int main()
+{
+	
+	int n,ms,me,i;
+	ms=me=0;
+	sf("%d",&n);
+	int a[n];
+
+	for(i=0;i<n;i++)
+		sf("%d",&a[i]);
+	for(i=0;i<n;i++)
+	{
+			me+=a[i];
+			if(me<0)
+				me=0;
+			if(ms<me)
+				ms=me;
+
+	}
+
+	pf("%d",ms);
+
+
+}	
+ 
