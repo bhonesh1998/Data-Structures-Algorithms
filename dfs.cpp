@@ -18,7 +18,7 @@ EMAIL-rajachawla778@gmail.com
 #define z long long int
 using namespace std;
  int g[100][100];
- bool state[100];
+ bool state[100]={false};
  int v;
 //-------------------------------------------------------------------------------------------------
 void sol(int ver)
@@ -79,9 +79,7 @@ int main()
             pf("\n");
     }
    
-      for(i=0;i<20;++i) {
-      state[i]=false;
-    }
+  
 
     pf("after dfs nodes are :- \n");
 
