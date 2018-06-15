@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define db double 
+#define z long long int 
+using namespace std;
+int main()
+{
+
+       int n;
+       sf("%d",&n);
+       int x = (int)(log2(n));
+       cout << pow(2,x);
+   }
