@@ -8,3 +8,7 @@ L.put(3)
 L.put(4)
 print(L.get())
 print(L.get())
+if L.full():
+  print("full")
+if L.empty():
+  print("Empty")
