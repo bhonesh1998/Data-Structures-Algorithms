@@ -2,6 +2,16 @@
 using namespace std;
 #define z long long int 
 
+void dfs(vector<int> v[],bool vis[],int sr)
+{
+    if(vis[sr]==false)
+    {
+        vis[sr]=true;
+        for(auto u : v[sr])
+        dfs(v,vis,u);
+    }
+}
+
 int main()
 {
     z n,e,i,j;
@@ -14,11 +24,15 @@ int main()
         v[x].push_back(y);
         v[y].push_back(x);
     }
+    int ans=0;
+    bool vis[n]={false};
     for(i=0;i<n;i++)
     {
-        z pp=v[i].size();
-        for(j=0;j<pp;j++)
-        cout<<v[i][j]<<" ";
-        cout<<endl;
+        if(vis[i]==false)
+        {
+            dfs(v,vis,i);
+            ans++;
+        }
     }
+    cout<<ans;
 }
